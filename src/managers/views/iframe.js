@@ -91,9 +91,11 @@ class IframeView {
 		this.iframe.style.border = "none";
 
 		// sandbox
-		this.iframe.sandbox = "allow-scripts allow-forms";
+		this.iframe.sandbox = "allow-same-origin allow-forms";
+
 		if (this.settings.allowScriptedContent) {
 			// allow-scripts is already set above
+			this.iframe.sandbox += " allow-scripts";
 		}
 		if (this.settings.allowPopups) {
 			this.iframe.sandbox += " allow-popups";
