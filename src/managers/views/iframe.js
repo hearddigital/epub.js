@@ -94,7 +94,6 @@ class IframeView {
 		this.iframe.sandbox = "allow-same-origin allow-forms";
 
 		if (this.settings.allowScriptedContent) {
-			// allow-scripts is already set above
 			this.iframe.sandbox += " allow-scripts";
 		}
 		if (this.settings.allowPopups) {
